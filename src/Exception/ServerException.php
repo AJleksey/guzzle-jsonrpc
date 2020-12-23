@@ -14,6 +14,8 @@
 
 namespace Graze\GuzzleHttp\JsonRpc\Exception;
 
-class ServerException extends RequestException
+use GuzzleHttp\Exception\BadResponseException;
+
+class ServerException extends BadResponseException
 {
 }
