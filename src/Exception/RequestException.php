@@ -32,6 +32,7 @@ class RequestException extends HttpRequestException
      * @param HttpResponseInterface|null $response       Response received
      * @param Exception|null            $previous       Previous exception
      * @param array|null                 $handlerContext Optional handler context.
+     * @param BodySummarizerInterface $bodySummarizer
      *
      * @return HttpRequestException
      */
@@ -41,8 +42,8 @@ class RequestException extends HttpRequestException
         Throwable $previous = null,
         array $handlerContext = null,
         BodySummarizerInterface $bodySummarizer = null
-    ): self
-    {
+    ): self {
+
         if ($request instanceof RequestInterface && $response instanceof ResponseInterface) {
             static $clientErrorCodes = [-32600, -32601, -32602, -32700];
 
