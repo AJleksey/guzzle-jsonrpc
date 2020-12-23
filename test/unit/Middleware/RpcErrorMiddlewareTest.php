@@ -23,7 +23,7 @@ class RpcMiddlewareMiddlewareTest extends UnitTestCase
     /** @var RpcErrorMiddleware */
     private $middleware;
 
-    public function setUp()
+    protected function setUp():void
     {
         $this->request = $this->mockRequest();
         $this->response = $this->mockResponse();

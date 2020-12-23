@@ -20,7 +20,7 @@ class ResponseTest extends UnitTestCase
     /** @var mixed */
     private $stream;
 
-    public function setUp()
+    protected function setUp():void
     {
         $this->stream = $this->mockStream();
     }
