@@ -60,7 +60,7 @@ class RequestException extends HttpRequestException
                 . ' [error code] ' . $errorCode
                 . ' [error message] ' . $response->getRpcErrorMessage();
 
-            return new $className($message, $request, $response, $previous, $handlerContext);
+            return new $className($message, $request, $response, $previous, $handlerContext = []);
         }
 
         return parent::create($request, $response, $previous, $handlerContext, $bodySummarizer);
